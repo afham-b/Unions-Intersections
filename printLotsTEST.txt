@@ -1,0 +1,43 @@
+#include "printLots.h"
+#include <iostream>
+#include <list>
+#include <string>
+using namespace std;
+
+int main () {
+
+	// myList1 contains 10, 21, 7, 35, 18, 6
+	list<int> myList1;
+	myList1.push_back(10);
+	myList1.push_back(21);
+	myList1.push_back(7);
+	myList1.push_back(35);
+	myList1.push_back(18);
+	myList1.push_back(6);
+
+	// myList2 contains cat, dog, bird, giraffe, zebra
+	list<string>myList2;
+	myList2.push_back("cat");
+	myList2.push_back("dog");
+	myList2.push_back("bird");
+	myList2.push_back("giraffe");
+	myList2.push_back("zebra");
+
+	// positions contains 3, 5, 0, 2
+	list<int> positions;
+	positions.push_back(3);
+	positions.push_back(5);
+	positions.push_back(0);
+	positions.push_back(2);
+
+	// Test 1, should output: 35 6 10 7
+	printLots(myList1, positions);
+
+	// Test 2, should output: giraffe cat bird
+	printLots(myList2, positions);
+
+#ifdef _MSC_VER
+	system("pause");
+#endif
+	return 0;
+}
